@@ -41,7 +41,7 @@ platform :android do
     gradle(task: "clean assembleRelease")
     copy_artifacts(
         artifacts: ['*/build/outputs/apk/**/*.apk'],
-        target_path: '[*/app]'
+        target_path: '[/app]'
       )
   end
 end
