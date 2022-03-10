@@ -42,7 +42,7 @@ class TimerScreen : AppCompatActivity() {
 
         object : CountDownTimer(timeToNextEvent, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                val date = getDateData("2022-03-14T12:58:25.208Z", mServerDateFormat)
+                val date = getDateData("2022-03-15T12:58:25.208Z", mServerDateFormat)
                 // Used for formatting digit to be in 2 digits only
                 val f: NumberFormat = DecimalFormat("00")
                 binding.textView.text =
