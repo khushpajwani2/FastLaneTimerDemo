@@ -43,5 +43,9 @@ platform :android do
         artifacts: ['*/build/outputs/apk/**/*.apk'],
         target_path: 'FastLaneTimerDemo/fastlane/'
       )
+      bundletool(
+        apk_output_path: 'FastLaneTimerDemo/fastlane/',
+        verbose: true
+      )
   end
 end

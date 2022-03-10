@@ -31,4 +31,4 @@ jobs:
           echo test, and deploy your project.
           
       - name: Distribute app to Beta track 🚀
-        run: bundle exec fastlane build
+        run: fastlane build
