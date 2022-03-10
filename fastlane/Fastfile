@@ -39,5 +39,9 @@ platform :android do
   desc "Build"
   lane :build do
     gradle(task: "clean assembleRelease")
+    copy_artifacts(
+        artifacts: ['*/build/outputs/apk/**/*.apk'],
+        target_path: '[*/app]'
+      )
   end
 end

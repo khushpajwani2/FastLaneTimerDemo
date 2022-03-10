@@ -5,12 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0026404">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0020133">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: clean assembleRelease" time="55.8770196">
+      <testcase classname="fastlane.lanes" name="1: clean assembleRelease" time="46.3737528">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: copy_artifacts" time="0.016555">
         
       </testcase>
     
