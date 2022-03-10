@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center">
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/firstDigitDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondDigitDay"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/secondDigitDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/dayDigitsSplitter"
+        app:layout_constraintStart_toEndOf="@+id/firstDigitDay"
+        app:layout_constraintTop_toTopOf="@+id/firstDigitDay" />
+
+    <TextView
+        android:id="@+id/dayDigitsSplitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text=":"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/firstDigitHour"
+        app:layout_constraintStart_toEndOf="@+id/secondDigitDay"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitDay" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/firstDigitHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/secondDigitHour"
+        app:layout_constraintStart_toEndOf="@+id/dayDigitsSplitter"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitDay" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/secondDigitHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/hourDigitsSplitter"
+        app:layout_constraintStart_toEndOf="@+id/firstDigitHour"
+        app:layout_constraintTop_toTopOf="@+id/firstDigitHour" />
+
+    <TextView
+        android:id="@+id/hourDigitsSplitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text=":"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/firstDigitMinute"
+        app:layout_constraintStart_toEndOf="@+id/secondDigitHour"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitHour" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/firstDigitMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/secondDigitMinute"
+        app:layout_constraintStart_toEndOf="@+id/hourDigitsSplitter"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitMinute" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/secondDigitMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/minuteDigitsSplitter"
+        app:layout_constraintStart_toEndOf="@+id/firstDigitMinute"
+        app:layout_constraintTop_toTopOf="@+id/firstDigitSecond" />
+
+    <TextView
+        android:id="@+id/minuteDigitsSplitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text=":"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/firstDigitSecond"
+        app:layout_constraintStart_toEndOf="@+id/secondDigitMinute"
+        app:layout_constraintTop_toTopOf="@+id/firstDigitSecond" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/firstDigitSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/secondDigitSecond"
+        app:layout_constraintStart_toEndOf="@+id/minuteDigitsSplitter"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitSecond" />
+
+    <com.example.newbasicstructure.CountDownDigit
+        android:id="@+id/secondDigitSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstDigitSecond"
+        app:layout_constraintTop_toTopOf="@+id/secondDigitHour" />
+</androidx.constraintlayout.widget.ConstraintLayout>

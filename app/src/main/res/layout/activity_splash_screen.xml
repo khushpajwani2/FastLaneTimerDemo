@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alignedtextview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:countdownClock="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.TimerScreen"
+        android:background="@color/purple_200">
+
+<!--        <com.example.newbasicstructure.util.CountDownTimer
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/detailsElementBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/date/hhmmss" />
+
+        <com.example.newbasicstructure.CountDownClock
+            android:id="@+id/countdownClockSecond"
+            countdownClock:almostFinishedCallbackTimeInSeconds="5"
+            countdownClock:animationDuration="550"
+            countdownClock:countdownTickInterval="250"
+            countdownClock:digitBottomDrawable="@drawable/background_bottom_green"
+            countdownClock:digitPadding="7dp"
+            countdownClock:digitSplitterColor="@color/black"
+            countdownClock:digitTextColor="@color/black"
+            countdownClock:digitTextSize="40sp"
+            countdownClock:digitTopDrawable="@drawable/background_top_green_light"
+            countdownClock:digitWidth="35dp"
+            countdownClock:halfDigitHeight="30dp"
+            countdownClock:resetSymbol="0"
+            countdownClock:splitterPadding="2dp"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            alignedtextview:layout_constraintBottom_toTopOf="@+id/textView"
+            alignedtextview:layout_constraintEnd_toEndOf="parent"
+            alignedtextview:layout_constraintStart_toStartOf="parent"
+            alignedtextview:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
