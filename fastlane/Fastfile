@@ -18,9 +18,9 @@ platform :android do
   desc "Build"
   lane :build do
     gradle(task: "assemble", build_type: 'Release')
-    copy_artifacts(
-        artifacts: ['*/build/outputs/apk/**/*.apk'],
-        target_path: 'FastLaneTimerDemo/fastlane/'
-      )
+#     copy_artifacts(
+#         artifacts: ['*/build/outputs/apk/**/*.apk'],
+#         target_path: 'FastLaneTimerDemo/fastlane/'
+#       )
   end
 end
